@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".QrpagoActivity">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color"
+            android:src="@drawable/baseline_back"
+            android:contentDescription="@string/back_button_desc"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Código QR para Pago"
+            android:textSize="24sp"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_color"
+            android:layout_gravity="center" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <!-- Imagen del código QR -->
+        <ImageView
+            android:id="@+id/qrCodeImageView"
+            android:layout_width="375dp"
+            android:layout_height="375dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/qr_code_desc"
+            android:scaleType="fitCenter"
+            android:src="@drawable/qrpago" />
+
+        <!-- Texto para datos del receptor -->
+        <TextView
+            android:id="@+id/receptorInfoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yape:\n Guevara Mendez, Sergio Matias."
+            android:textSize="20sp"
+            android:textColor="@color/text_primary_color"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:gravity="center" />
+
+        <!-- Botón para subir imagen -->
+        <Button
+            android:id="@+id/uploadImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subir Captura de Pago"
+            android:backgroundTint="@color/secondary_color"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center" />
+
+        <!-- Vista previa de la imagen seleccionada -->
+        <ImageView
+            android:id="@+id/previewImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/payment_image_preview_desc"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <!-- Botón para realizar el pago -->
+        <Button
+            android:id="@+id/payButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Realizar Pago"
+            android:backgroundTint="@color/secondary_color"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</ScrollView>

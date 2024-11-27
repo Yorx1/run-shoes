@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor_login"
+    tools:context=".AdminMainActivity">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/topNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_theme_light_primaryContainer"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcomeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bienvenido, Admin*"
+            android:textSize="24sp"
+            android:textColor="@color/md_theme_light_onPrimaryContainer"
+            android:padding="16dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/adminsettingsBoton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:contentDescription="Admin Settings"
+            android:padding="8dp"
+            android:src="@drawable/baseline_settings"
+            app:tint="@color/md_theme_light_onPrimaryContainer" />
+    </LinearLayout>
+
+    <!-- Banner Image -->
+    <ImageView
+        android:id="@+id/bannerImageView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toBottomOf="@id/topNavBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Sección de Logo y Botones -->
+    <LinearLayout
+        android:id="@+id/logoAndButtonsSection"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/submenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bannerImageView"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavBar">
+
+        <!-- GridLayout para los Botones -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:columnCount="2"
+            android:padding="1dp"
+            android:rowCount="4">
+
+            <!-- Botón Inicio (B1) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_inicio"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:drawableTop="@drawable/baseline_home"
+                android:iconTint="@color/md_theme_light_primary"
+                android:text="Inicio"
+                android:textColor="@color/md_theme_light_primary" />
+
+            <!-- Botón Dashboard (B2) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_dashboard"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:drawableTop="@drawable/baseline_dashboard"
+                android:iconTint="@color/md_theme_light_primary"
+                android:text="Dashboard"
+                android:textColor="@color/md_theme_light_primary" />
+
+            <!-- Botón Notificaciones (B3) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_notificaciones"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:drawableTop="@drawable/baseline_notifications"
+                android:iconTint="@color/md_theme_light_primary"
+                android:text="Notificaciones"
+                android:textColor="@color/md_theme_light_primary" />
+
+            <!-- Botón Ingresar Producto (B4) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_ingresar_producto"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:drawableTop="@drawable/baseline_add"
+                android:iconTint="@color/md_theme_light_primary"
+                android:text="Ingresar Producto"
+                android:textColor="@color/md_theme_light_primary" />
+
+            <!-- Botón Inventario -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_inventario"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:drawableTop="@drawable/baseline_inventory"
+                android:iconTint="@color/md_theme_light_primary"
+                android:text="Inventario"
+                android:textColor="@color/md_theme_light_primary" />
+
+            <!-- Botón Órdenes -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_ordenes"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:drawableTop="@drawable/baseline_receipt"
+                android:iconTint="@color/md_theme_light_primary"
+                android:text="Órdenes"
+                android:textColor="@color/md_theme_light_primary" />
+
+            <!-- Botón Reportes -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_reportes"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:drawableTop="@drawable/baseline_assessment"
+                android:iconTint="@color/md_theme_light_primary"
+                android:text="Reportes"
+                android:textColor="@color/md_theme_light_primary" />
+
+            <!-- Botón Promociones -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_promociones"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:drawableTop="@drawable/baseline_local_offer"
+                android:iconTint="@color/md_theme_light_primary"
+                android:text="Promociones"
+                android:textColor="@color/md_theme_light_primary" />
+
+        </GridLayout>
+    </LinearLayout>
+
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@color/md_theme_light_secondaryContainer"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/sloganTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Run Shoes\nLa mejor calidad para tu bienestar"
+            android:textSize="18sp"
+            android:textColor="@color/md_theme_light_onSecondaryContainer"
+            android:padding="5dp"
+            android:gravity="center" />
+
+        <!-- Aquí puedes añadir otros botones o íconos de navegación si es necesario -->
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Imagen del producto -->
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/product_image_desc"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baseline_placeholder_image" /> <!-- Imagen temporal mientras carga -->
+
+    <!-- Contenedor de información -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Producto"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_color" />
+
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$123.45"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary_color" />
+    </LinearLayout>
+
+    <!-- Botón para agregar al carrito -->
+    <ImageButton
+        android:id="@+id/addToCartButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/baseline_add_shopping_cart"
+        android:contentDescription="@string/add_to_cart_desc"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:tint="@color/primary_color" />
+</LinearLayout>

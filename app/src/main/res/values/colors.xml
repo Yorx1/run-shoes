@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00796B</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background_color">#e9bfa5</color>
+    <color name="colorGo">#224c80</color>
+    <color name="gray">#e3e0d8</color>
+    <color name="backgroundcolor_login">#fefeff</color>
+    <color name="text_primary_color">#000000</color>
+    <color name="text_secondary_color">#757575</color>
+    <color name="primary_color">#FF5722</color>
+    <color name="error_color">#FF0000</color>
+    <color name="md_theme_light_primaryContainer">#e9bfa5</color>
+    <color name="md_theme_light_onPrimaryContainer">#000000</color>
+    <color name="md_theme_light_primary">#6200EA</color>
+    <color name="md_theme_light_secondaryContainer">#224c80</color>
+    <color name="submenu">#FFDFD8</color>
+    <color name="secondary_color">#b83012</color>
+    <color name="md_theme_light_onSecondaryContainer">#FFFFFF</color>
+</resources>

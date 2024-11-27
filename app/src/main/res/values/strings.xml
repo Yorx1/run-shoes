@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">RunShoes</string>
+    <string name="product_image_desc">Imagen del producto</string>
+    <string name="add_to_cart_desc">Agregar al carrito</string>
+    <string name="decrease_quantity_desc">Disminuir cantidad</string>
+    <string name="increase_quantity_desc">Aumentar cantidad</string>
+    <string name="remove_from_cart_desc">Eliminar del carrito</string>
+    <string name="qr_code_desc">Código QR para realizar el pago</string>
+    <string name="back_button_desc">Volver a la pantalla anterior</string>
+    <string name="payment_image_preview_desc">Vista previa de la imagen de pago</string>
+    <!-- res/values/strings.xml -->
+    <string-array name="document_types">
+        <item>DNI</item>
+        <item>RUC</item>
+    </string-array>
+    <string-array name="invoice_types">
+        <item>Boleta</item>
+        <item>Factura</item>
+    </string-array>
+
+</resources>

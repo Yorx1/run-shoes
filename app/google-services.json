@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "202664109983",
+    "project_id": "proyectofinalam-2594c",
+    "storage_bucket": "proyectofinalam-2594c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202664109983:android:869601deb3c2477ee07faa",
+        "android_client_info": {
+          "package_name": "com.example.proyectofinalam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfdBHzZBAFDe0u-ladSMArQzHg4kuNi7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".CartActivity">
+
+    <!-- AppBar con título -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/cartToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorGo"
+        app:title="Carrito de Compras"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/baseline_back"
+        app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light" />
+
+    <!-- Lista de productos en el carrito -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/cartToolbar"
+        android:layout_above="@id/cartSummaryLayout"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+
+    <!-- Mensaje si no hay productos en el carrito -->
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nada para mostrar, date una vuelta por nuestra sección de productos para agregar productos a tu carrito de compras."
+        android:textSize="16sp"
+        android:textColor="@color/text_primary_color"
+        android:layout_centerInParent="true"
+        android:visibility="gone" /> <!-- Oculto por defecto -->
+
+    <!-- Resumen de compra y botón de checkout -->
+    <LinearLayout
+        android:id="@+id/cartSummaryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/cartTotalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_color" />
+
+        <!-- LinearLayout horizontal para los dos TextViews -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <!-- Total productos (se asegura que ocupe todo el espacio disponible) -->
+            <TextView
+                android:id="@+id/cartTotalProducts"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="(0 productos)"
+                android:textColor="@color/text_primary_color"
+                android:textSize="16sp" />
+
+            <!-- Total amount -->
+            <TextView
+                android:id="@+id/cartTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0.00"
+                android:textSize="18sp"
+                android:textColor="@color/text_secondary_color" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/checkoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proceder al Pago"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/primary_color" />
+    </LinearLayout>
+
+</RelativeLayout>

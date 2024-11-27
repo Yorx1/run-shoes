@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ProyectoFinalAM" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+    <style name="Theme.MyApp.Dark" parent="Theme.Material3.Dark.NoActionBar">
+    </style>
+
+    <style name="Theme.ProyectoFinalAM" parent="Base.Theme.ProyectoFinalAM" />
+
+    <style name="SplashTheme" parent="Theme.ProyectoFinalAM">
+        <item name="android:windowBackground">@drawable/splashscreen</item>
+    </style>
+
+</resources>

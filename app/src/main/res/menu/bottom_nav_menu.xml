@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navHome"
+        android:icon="@drawable/baseline_home"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/navSearch"
+        android:icon="@drawable/baseline_search"
+        android:title="Buscar" />
+    <item
+        android:id="@+id/navCarrito"
+        android:icon="@drawable/baseline_shopping_cart"
+        android:title="Carrito" />
+    <item
+        android:id="@+id/navUser"
+        android:icon="@drawable/baseline_person"
+        android:title="Ver Perfil" />
+</menu>
