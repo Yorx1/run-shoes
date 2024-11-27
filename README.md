@@ -1,4 +1,4 @@
-**Integrantes**  
+**Integrantes:**  
 Bocanegra Cruz, Gary Steven   
 Espinoza Yparraguirre, Diego Edgard   
 Guevara Mendez, Sergio Matías    
